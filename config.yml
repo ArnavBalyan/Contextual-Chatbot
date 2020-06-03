@@ -3,6 +3,7 @@ pipeline:
   - name: WhitespaceTokenizer
   - name: RegexFeaturizer
 # - name: CRFEntityExtractor
+# - name: EntitySynonymMapper
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
   - name: CountVectorsFeaturizer
