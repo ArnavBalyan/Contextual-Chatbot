@@ -68,6 +68,8 @@ class ActionDatabaseSearch(Action):
 		cur.close()
 		con.close()
 		return [AllSlotsReset()]
+		if response_string:
+			print("test")
 		"""status = np.zeros(4, dtype = int)
 		if(input_title):
 			status[0] = 1
