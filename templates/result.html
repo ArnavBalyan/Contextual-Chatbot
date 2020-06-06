@@ -13,3 +13,24 @@
 	    	<th>Journal</th>
 	    	<th>Url</th>
 	    </tr></thead>
+	    <tbody>
+			<tr>
+				<td>{{1}}</td>
+				<td>{{title[0]}}</td>
+				<td>{{author[0]}}</td>
+				<td>{{journal[0]}}</td>
+				<td>{{url[0]}}</td>
+			</tr>
+		</tbody>
+		{%for i in range (title| length -1)%}
+		<tbody>
+			<tr>
+				<td>{{loop.index + 1 }}</td>
+				<td>{{title[loop.index]}}</td>
+				<td>{{author[loop.index]}}</td>
+				<td>{{journal[loop.index]}}</td>
+				<td>{{url[loop.index]}}</td>
+			</tr>
+		</tbody>
+		{%endfor%}
+				
