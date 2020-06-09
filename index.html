@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat</title>
+</head>
+<body>
+  <div id="webchat"/>
+<script src="window.js"></script>
+// Or you can replace latest with a specific version
+<script>
+  WebChat.default.init({
+    selector: "#webchat",
+    initPayload: "/greet",
+    customData: {"language": "en"}, 
+    socketUrl: "http://localhost:5005",
+    socketPath: "/socket.io/",
+    title: "Hey, How can I help you today?",
+    subtitle: "My name is Genie",
+    params:{
+    storage : "session"
+    }
+
+  })
+</script>
+</body>
+</html>
