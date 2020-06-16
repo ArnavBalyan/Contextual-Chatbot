@@ -37,7 +37,7 @@ class ActionDatabaseSearch(Action):
 		return "action_database_search"
 	def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 		input_keyword = tracker.get_slot("keyword")
-		con = psycopg2.connect(host = 'localhost', database = 'backend_data', user = 'postgres', password = 'p@ss2hell')
+		con = psycopg2.connect(host = 'localhost', database = 'backend_data', user = 'postgres', password = '*******')
 		cur = con.cursor()
 		cur.execute("select dspace_object_id from metadatavalue where text_value ILIKE '%{}%'".format(input_keyword))
 		#cur.execute("select text_value from metadatavalue where text_value ILIKE '%{}%'".format(input_keyword))
