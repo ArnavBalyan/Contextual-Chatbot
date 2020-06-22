@@ -4,7 +4,7 @@ from flask_restful import Resource, Api
 
 app = Flask(__name__)
 api = Api(app)
-
+api2 = Api(app)
 class Display(Resource):
 	def get(self, string1):
 		headers = {'Content-Type': 'text/html'}
